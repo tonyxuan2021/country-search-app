@@ -1,25 +1,26 @@
-import React, {useRef} from "react";
+import React, { useRef,useEffect } from "react";
 import "./Search.scss";
-import { GiMagnifyingGlass } from "react-icons/gi";
 import { useGlobalContext } from "../context";
 
 const Search = () => {
+  const { setSearchTerm } = useGlobalContext();
+  const searchValue = useRef("");
 
-    const {setSearchTerm} = useGlobalContext()
-    const searchValue = useRef('')
+  const searchCountry = () => {
+    setSearchTerm(searchValue.current.value);
+  };
 
-    const searchCountry = () => {
-        setSearchTerm(searchValue.current.value)
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
+  useEffect(() => {
+    searchValue.current.focus();
+  }, []);
 
   return (
     <form className="search__form" onSubmit={handleSubmit}>
       <div className="search__wrapper">
-        <GiMagnifyingGlass />
         <input
           className="search__input"
           name="search"

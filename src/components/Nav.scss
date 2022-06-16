@@ -1,11 +1,16 @@
-
+@use '../styles/mixins'as *;
 
 .nav {
     display: flex;
     justify-content: space-between;
     padding: 3rem 0;
 
-    &__list li{
+    @include desktop {
+        padding: 5rem 8rem;
+        font-size: 2.2rem;
+    }
+
+    &__list li {
         list-style: none;
     }
 

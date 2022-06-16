@@ -1,0 +1,73 @@
+@use '../styles/mixins' as *;
+
+.single {
+
+    &__wrapper {
+        @include tablet {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            padding: 0 8rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+
+        &__wrapper {
+            margin: 5rem 0;
+
+            @include tablet {
+                width: 50%;
+            }
+        }
+    }
+
+    &__name {
+        margin-bottom: 3rem;
+    }
+
+    &__btm {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include desktop {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 3rem;
+        }
+
+        span {
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 0.5rem;
+
+            @include desktop {
+                margin-bottom: 2rem;
+            }
+
+        }
+    }
+
+    &__capital {
+        margin-bottom: 3rem;
+    }
+
+    &__lan {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    &--down {
+        @include desktop {
+            margin-top: 5rem;
+        }
+    }
+}

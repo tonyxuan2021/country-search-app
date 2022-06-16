@@ -20,10 +20,11 @@
     font-weight: 400;
     margin: 1.6rem 0;
     padding: 0 2rem;
+    background-color: hsl(0, 0%, 98%);
 
     @include tablet {
       // width: 768px;
-      max-width: 1279px;
+      max-width: 1440px;
       font-size: 1.6rem;
       line-height: 2.2rem;
     }
@@ -36,6 +37,6 @@
     }
   }
 
-  div, p, h1, h2, h3, button, label, input, ul{
+  div, p, h1, h2, h3, button, label, input, ul, span{
     margin: 0;
   }

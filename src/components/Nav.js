@@ -8,7 +8,7 @@ const Nav = () => {
       <p className="nav__logo">Where in the world?</p>
       <ul className="nav__list">
         <li>
-          <Link to="/" className="nav__dark">Dark mode</Link>
+          <a href="/" className="nav__dark">Home</a>
         </li>
       </ul>
     </nav>

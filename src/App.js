@@ -2,19 +2,20 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
-import "./styles/_global.scss"
-
+import SingleCountry from "./pages/SingleCountry";
+import "./styles/_global.scss";
 
 const App = () => {
   return (
-    <div className="app">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div>
         <Nav />
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/country/:id" component={SingleCountry} />
         </Switch>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 };
 
